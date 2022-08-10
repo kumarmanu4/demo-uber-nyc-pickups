@@ -41,7 +41,7 @@ def load_data():
             "K"
         ],  # specify names directly since they don't change
         skiprows=1,  # don't read header since names specified directly
-        usecols=[0, 1, 2, 3, 4, 5, 6, 7],  # doesn't load last column, constant value "B02512"
+        usecols=[0, 1, 2, 3, 4, 5, 6, 7],  
         
     )
 
@@ -76,24 +76,24 @@ def map(data, lat, lon, zoom):
     aggregation=pdk.types.String("MEAN"),
     color_range=COLOR_BREWER_BLUE_SCALE,
     threshold=1,
-    get_weight="P",
-    pickable=True,
-),
-                pdk.Layer(
-    "HeatmapLayer",
-    data=poultry_df,
-    opacity=0.9,
-    get_position=["lng", "lat"],
-    threshold=0.75,
-    aggregation=pdk.types.String("MEAN"),
     get_weight="N",
     pickable=True,
 ),
                 pdk.Layer(
     "HeatmapLayer",
-    data=poultry_df,
+    data=data,
     opacity=0.9,
-    get_position=["lng", "lat"],
+    get_position=["lon", "lat"],
+    threshold=0.75,
+    aggregation=pdk.types.String("MEAN"),
+    get_weight="P",
+    pickable=True,
+),
+                pdk.Layer(
+    "HeatmapLayer",
+    data=data,
+    opacity=0.9,
+    get_position=["lon", "lat"],
     threshold=0.75,
     aggregation=pdk.types.String("MEAN"),
     get_weight="K",
