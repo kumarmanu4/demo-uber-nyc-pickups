@@ -79,7 +79,7 @@ def map(data, lat, lon, zoom):
                 "pitch": 50,
             },
             layers=[
-                layerH
+                layer_selected
                 
             ],
             tooltip={
