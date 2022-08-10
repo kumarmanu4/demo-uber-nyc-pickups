@@ -28,16 +28,17 @@ st.set_page_config(layout="wide", page_title="NYC Ridesharing Demo", page_icon="
 @st.experimental_singleton
 def load_data():
     data = pd.read_csv(
-        "indian_cities.csv.txt",
+        "indianCities.csv",
         nrows=100000,  # approx. 10% of data
         names=[
+            "soil_quality",
             "city",
             "state",
             "lat",
             "lon",
         ],  # specify names directly since they don't change
         skiprows=1,  # don't read header since names specified directly
-        usecols=[0, 1, 2, 3],  # doesn't load last column, constant value "B02512"
+        usecols=[0, 1, 2, 3, 4],  # doesn't load last column, constant value "B02512"
         
     )
 
