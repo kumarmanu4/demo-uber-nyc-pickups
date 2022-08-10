@@ -76,12 +76,18 @@ def map(data, lat, lon, zoom):
                 "latitude": lat,
                 "longitude": lon,
                 "zoom": zoom,
-                "pitch": 0,
+                "pitch": 50,
             },
             layers=[
-                layer_selected
+                layerH
                 
             ],
+            tooltip={
+        'html': '<b>Elevation Value:</b> {elevationValue}',
+        'style': {
+            'color': 'white'
+        }
+    }
         )
     )
 
@@ -191,6 +197,16 @@ layerK = pdk.Layer(
     pickable=True,
 )
     
+layerH = pdk.Layer(
+                    "HexagonLayer",
+                    data=data,
+                    get_position=["lon", "lat"],
+                    radius=100,
+                    elevation_scale=4,
+                    elevation_range=[0, 1000],
+                    pickable=True,
+                    extruded=True,
+                )
     
 option = st.selectbox(
      'Select the option?',
