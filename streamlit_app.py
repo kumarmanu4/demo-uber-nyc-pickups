@@ -267,6 +267,7 @@ st.vega_lite_chart(df, {
      'encoding': {
          'x': {'field': 'Rainfall', 'type': 'quantitative'},
          'y': {'field': 'Temperature', 'type': 'quantitative'},
+         'x2': {'field': 'Humidity', 'type': 'quantitative'},
          "longitude": {'field': 'lon', 'type': 'quantitative'},
     "latitude": {'field': 'lat', 'type': 'quantitative'},
          'size': {'field': 'Humidity', 'type': 'quantitative'},
