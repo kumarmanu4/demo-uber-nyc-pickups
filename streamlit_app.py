@@ -23,7 +23,7 @@ import streamlit as st
 from ipywidgets import HTML
 
 # SETTING PAGE CONFIG TO WIDE MODE AND ADDING A TITLE AND FAVICON
-st.set_page_config(layout="wide", page_title="Indian Soil Prediction", page_icon=":random:")
+st.set_page_config(layout="wide", page_title="Soil Fertilizer Prediction", page_icon=":random:")
 
 # LOAD DATA ONCE
 @st.experimental_singleton
@@ -145,7 +145,7 @@ def update_query_params():
 
 
 with row1_1:
-    st.title("Indian Soil Data")
+    st.title("Soil fertilizer prediction")
     year_selected = st.slider(
         "Select Year", 1990, 2022, key="year", on_change=update_query_params
     )
