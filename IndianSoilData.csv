@@ -39,20 +39,20 @@
 32.00,Jamshedpur,Jharkhand,22.801421,86.201861,6,5,8
 34.00,Jodhpur ,Rajasthan,26.242625,73.025391,6,7,9
 56.00,Kalburgi,Karnataka,17.314739,76.824343,7,8,4
-34.00,Kannur,Kerala,11.872917,75.370619,8,1.2,5
+34.00,Kannur,Kerala,11.872917,75.370619,0.1,0.2,0.3
 87.00,Kanpur,Uttar Pradesh,26.445005,80.331857,9,3,7
-98.00,Kasargod,Kerala,12.43867,75.201229,4,4.5,8
-56.00,Kochi,Kerala,9.921673,76.26549,5,0.8,1
+98.00,Kasargod,Kerala,12.43867,75.201229,0.1,0.2,0.3
+56.00,Kochi,Kerala,9.921673,76.26549,0.1,0.2,0.3
 45.00,Kodagu,Karnataka,12.337494,75.806908,7,1,2
 45.00,Kolar,Karnataka,13.135745,78.132561,8,2,2
 12.00,Kolkata,West Bengal,22.572646,88.363895,1.2,6,3
-23.00,Kollam,Kerala,8.885084,76.593752,3,6,4.5
+23.00,Kollam,Kerala,8.885084,76.593752,0.1,0.2,0.3
 32.00,Kothur,Telangana,17.147351,78.2889,1,2,3
-76.00,Kozhikode,Kerala,11.251761,75.783335,0.8,8,1
+76.00,Kozhikode,Kerala,11.251761,75.783335,0.1,0.2,0.3
 67.00,Lucknow,Uttar Pradesh,26.838821,80.942501,1,9,1
 89.00,Ludhiana,Punjab,30.897086,75.857357,1,4,2
 90.00,Madurai,Tamil Nadu,9.92102,78.12179,2,5,2
-45.00,Malappuram,Kerala,11.070957,76.074571,2,7,6
+45.00,Malappuram,Kerala,11.070957,76.074571,0.1,0.2,0.3
 56.00,Meerut,Uttar Pradesh,28.981238,77.701017,6,8,6
 38.00,Moreh,Manipur,24.251281,94.301304,6,1,7
 89.00,Mumbai,Maharashtra,19.068493,72.880505,7,2,8
@@ -75,8 +75,8 @@
 34.00,Srinagar,Jammu & Kashmir,34.09015,74.799191,9,8,1
 44.00,Surat,Gujarat,21.17024,72.831061,4,9,2
 56.00,Thanjavur,Tamil Nadu,10.786999,79.137827,5,4,2
-66.00,Thiruvananthapuram,Kerala,8.526786,76.938081,7,5,6
-45.00,Thrissur,Kerala,10.524207,76.215694,8,7,6
+66.00,Thiruvananthapuram,Kerala,8.526786,76.938081,0.1,0.2,0.3
+45.00,Thrissur,Kerala,10.524207,76.215694,0.1,0.2,0.3
 12.00,Vadodara,Gujarat,22.307159,73.181219,1,8,7
 12.00,Varanasi,Uttar Pradesh,25.319427,82.973768,2,1.2,8
 12.00,Vasai-Virar City,Maharasthra,19.387647,72.839545,2,3,9
