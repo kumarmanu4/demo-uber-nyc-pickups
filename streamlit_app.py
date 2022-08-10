@@ -248,18 +248,18 @@ df = pd.read_csv(
             "Temperature",
             "Humidity",
             "Rainfall",
-            "pH",
-            "lat",
-            "lon",
+            "pH",            
             "N",
             "P",
             "K",
             "Soil",
             "Crop",
-            "Fertilizer"
+            "Fertilizer",
+            "lat",
+            "lon"
         ],  # specify names directly since they don't change
         skiprows=1,  # don't read header since names specified directly
-        usecols=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],          
+        usecols=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],          
     )    
     
 st.vega_lite_chart(df, {
