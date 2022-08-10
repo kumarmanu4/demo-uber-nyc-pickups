@@ -31,15 +31,14 @@ def load_data():
         "indian_cities.csv.txt",
         nrows=100000,  # approx. 10% of data
         names=[
-            "date/time",
+            "city",
+            "state",
             "lat",
             "lon",
         ],  # specify names directly since they don't change
         skiprows=1,  # don't read header since names specified directly
-        usecols=[0, 1, 2],  # doesn't load last column, constant value "B02512"
-        parse_dates=[
-            "date/time"
-        ],  # set as datetime instead of converting after the fact
+        usecols=[0, 1, 2, 3],  # doesn't load last column, constant value "B02512"
+        
     )
 
     return data
@@ -147,10 +146,10 @@ midpoint = mpoint(data["lat"], data["lon"])
 
 with row2_1:
     st.write(
-        f"""**All New York City from {hour_selected}:00 and {(hour_selected + 1) % 24}:00**"""
+        f"""**indian cities map**"""
     )
-    map(filterdata(data, hour_selected), midpoint[0], midpoint[1], 11)
-
+    map(data, midpoint[0], midpoint[1], 11)
+'''
 with row2_2:
     st.write("**La Guardia Airport**")
     map(filterdata(data, hour_selected), la_guardia[0], la_guardia[1], zoom_level)
@@ -162,7 +161,8 @@ with row2_3:
 with row2_4:
     st.write("**Newark Airport**")
     map(filterdata(data, hour_selected), newark[0], newark[1], zoom_level)
-
+'''
+'''
 # CALCULATING DATA FOR THE HISTOGRAM
 chart_data = histdata(data, hour_selected)
 
@@ -184,3 +184,4 @@ st.altair_chart(
     .configure_mark(opacity=0.2, color="red"),
     use_container_width=True,
 )
+'''
