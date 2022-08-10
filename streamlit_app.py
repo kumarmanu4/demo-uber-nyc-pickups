@@ -115,7 +115,7 @@ layer = pdk.Layer(
     get_fill_color=[255, 0, 0],
     get_radius=100
 )
-r = pdk.Deck(layer, initial_view_state=viewport)
+r = pdk.Deck(layer)
 
 def filter_by_bbox(row, west_lng, east_lng, north_lat, south_lat):
     return west_lng < row['lon'] < east_lng and south_lat < row['lat'] < north_lat
