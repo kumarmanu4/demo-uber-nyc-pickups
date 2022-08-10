@@ -74,9 +74,29 @@ def map(data, lat, lon, zoom):
     aggregation=pdk.types.String("MEAN"),
     color_range=COLOR_BREWER_BLUE_SCALE,
     threshold=1,
-    get_weight="weight",
+    get_weight="P",
     pickable=True,
 ),
+                pdk.Layer(
+    "HeatmapLayer",
+    data=poultry_df,
+    opacity=0.9,
+    get_position=["lng", "lat"],
+    threshold=0.75,
+    aggregation=pdk.types.String("MEAN"),
+    get_weight="N",
+    pickable=True,
+),
+                pdk.Layer(
+    "HeatmapLayer",
+    data=poultry_df,
+    opacity=0.9,
+    get_position=["lng", "lat"],
+    threshold=0.75,
+    aggregation=pdk.types.String("MEAN"),
+    get_weight="K",
+    pickable=True,
+)
             ],
         )
     )
