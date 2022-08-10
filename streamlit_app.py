@@ -209,22 +209,22 @@ layerH = pdk.Layer(
                 )
 
 Temp = st.number_input('Enter Temperature:')
-st.write('The Temperature is ', Temp)
+st.write('The Temperature is: ', Temp)
 
 Humidity = st.number_input('Enter Humidity:')
-st.write('The Humidity is ', Humidity)
+st.write('The Humidity is: ', Humidity)
 
 RainFall = st.number_input('Enter Rainfall:')
-st.write('The RainFall is ', RainFall)
+st.write('The RainFall is: ', RainFall)
 
 pH = st.number_input('Enter pH:')
-st.write('The pH is ', pH)
+st.write('The pH is: ', pH)
 
 Crop = st.text_input('Enter Crop:')
-st.write('The Crop is ', Crop)
+st.write('The Crop is: ', Crop)
 
 Soil = st.text_input('Enter Soil:')
-st.write('The Soil is ', Soil)
+st.write('The Soil is: ', Soil)
 
 
 option = st.selectbox(
