@@ -268,7 +268,7 @@ st.vega_lite_chart(df, {
          'x': {'field': 'lon', 'type': 'quantitative'},
          'y': {'field': 'lat', 'type': 'quantitative'},
          'size': {'field': 'Rainfall', 'type': 'quantitative'},
-         'color': {'field': 'Rainfall', 'type': 'quantitative'},
+         'color': {'field': 'Temperature', 'type': 'quantitative'},
      },
  })    
     
