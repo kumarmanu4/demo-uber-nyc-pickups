@@ -28,7 +28,7 @@ st.set_page_config(layout="wide", page_title="NYC Ridesharing Demo", page_icon="
 @st.experimental_singleton
 def load_data():
     data = pd.read_csv(
-        "uber-raw-data-sep14.csv.gz",
+        "indian_cities.csv.txt",
         nrows=100000,  # approx. 10% of data
         names=[
             "date/time",
