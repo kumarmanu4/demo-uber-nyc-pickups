@@ -270,7 +270,7 @@ st.vega_lite_chart(df, {
          'size': {'field': 'Rainfall', 'type': 'quantitative'},
          'color': {'field': 'Temperature', 'type': 'quantitative'},
      },
- })    
+ }, use_container_width=True)    
     
 with row1_2:
     st.write(
