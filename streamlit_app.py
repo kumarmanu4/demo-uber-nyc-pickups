@@ -23,7 +23,7 @@ import streamlit as st
 from ipywidgets import HTML
 
 # SETTING PAGE CONFIG TO WIDE MODE AND ADDING A TITLE AND FAVICON
-st.set_page_config(layout="wide", page_title="NYC Ridesharing Demo", page_icon=":taxi:")
+st.set_page_config(layout="wide", page_title="Indian Soil Prediction", page_icon=":soil:")
 
 # LOAD DATA ONCE
 @st.experimental_singleton
@@ -293,6 +293,6 @@ midpoint = mpoint(data["lat"], data["lon"])
 
 with row2_1:
     st.write(
-        f"""**indian cities map**"""
+        f"""**Indian cities map**"""
     )
     map(data_filter, midpoint[0], midpoint[1], 11)
