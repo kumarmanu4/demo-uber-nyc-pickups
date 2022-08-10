@@ -58,15 +58,16 @@ def map(data, lat, lon, zoom):
             },
             layers=[
                 pdk.Layer(
-                    "HexagonLayer",
-                    data=data,
-                    get_position=["lon", "lat"],
-                    radius=100,
-                    elevation_scale=4,
-                    elevation_range=[0, 1000],
-                    pickable=True,
-                    extruded=True,
-                ),
+    "HeatmapLayer",
+    data=data,
+    opacity=0.9,
+    get_position=["lon", "lat"],
+    aggregation=pdk.types.String("MEAN"),
+    color_range=COLOR_BREWER_BLUE_SCALE,
+    threshold=1,
+    get_weight="weight",
+    pickable=True,
+),
             ],
         )
     )
