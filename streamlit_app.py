@@ -66,6 +66,37 @@ color_range2 = [ [65, 182, 196],
 
 
 
+
+# FUNCTION FOR AIRPORT MAPS
+def map(data, lat, lon, zoom):
+    st.write(
+        pdk.Deck(
+            map_style="mapbox://styles/mapbox/light-v9",
+            initial_view_state={
+                "latitude": lat,
+                "longitude": lon,
+                "zoom": zoom,
+                "pitch": 0,
+            },
+            layers=[
+                layer1
+                
+            ],
+        )
+    )
+
+# STREAMLIT APP LAYOUT
+data = load_data()    
+
+layer1 = pdk.Layer(
+    'ScatterplotLayer',     # Change the `type` positional argument here
+    data=data,
+    get_position=['lon', 'lat'],
+    auto_highlight=True,
+    get_radius=1000,          # Radius is given in meters
+    get_fill_color=[180, 0, 200, 140],  # Set an RGBA value for fill
+    pickable=True)
+
 layerN = pdk.Layer(
     "HeatmapLayer",
     data=data,
@@ -101,35 +132,6 @@ layerK = pdk.Layer(
     pickable=True,
 )
 
-# FUNCTION FOR AIRPORT MAPS
-def map(data, lat, lon, zoom):
-    st.write(
-        pdk.Deck(
-            map_style="mapbox://styles/mapbox/light-v9",
-            initial_view_state={
-                "latitude": lat,
-                "longitude": lon,
-                "zoom": zoom,
-                "pitch": 0,
-            },
-            layers=[
-                layer1
-                
-            ],
-        )
-    )
-
-# STREAMLIT APP LAYOUT
-data = load_data()    
-
-layer1 = pdk.Layer(
-    'ScatterplotLayer',     # Change the `type` positional argument here
-    data=data,
-    get_position=['lon', 'lat'],
-    auto_highlight=True,
-    get_radius=1000,          # Radius is given in meters
-    get_fill_color=[180, 0, 200, 140],  # Set an RGBA value for fill
-    pickable=True)
 
 text = HTML(value='Move the viewport')
 layer = pdk.Layer(
