@@ -106,7 +106,7 @@ def map(data, lat, lon, zoom):
 text = HTML(value='Move the viewport')
 layer = pdk.Layer(
     'ScatterplotLayer',
-    data,
+    data=data,
     pickable=True,
     get_position=['lon', 'lat'],
     get_fill_color=[255, 0, 0],
