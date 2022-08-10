@@ -79,7 +79,7 @@ def map(data, lat, lon, zoom):
                 "pitch": 0,
             },
             layers=[
-                layerN
+                layer_selected
                 
             ],
         )
@@ -192,6 +192,15 @@ option = st.selectbox(
      ('N', 'P', 'K'))    
 st.write('You selected:', option)
 
+if option == 'N':
+    layer_selected=layerN
+elif option == 'P':
+    layer_selected=layerP
+elif option == 'K':
+    layer_selected=layerK
+else:
+    layer_selected=layer1
+    
 with row1_2:
     st.write(
         """
