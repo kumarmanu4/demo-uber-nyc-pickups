@@ -85,8 +85,7 @@ def map(data, lat, lon, zoom):
         )
     )
 
-# STREAMLIT APP LAYOUT
-data = load_data()    
+data = ''    
 
 layer1 = pdk.Layer(
     'ScatterplotLayer',     # Change the `type` positional argument here
@@ -132,7 +131,8 @@ layerK = pdk.Layer(
     pickable=True,
 )
 
-
+# STREAMLIT APP LAYOUT
+data = load_data()
 
 
 # FILTER DATA FOR A SPECIFIC HOUR, CACHE
