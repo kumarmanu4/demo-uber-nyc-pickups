@@ -174,7 +174,7 @@ layerP = pdk.Layer(
     get_position=["lon", "lat"],
     threshold=1,
     aggregation=pdk.types.String("MEAN"),
-    color_range=color_range2,
+    color_range=COLOR_BREWER_BLUE_SCALE,
     get_weight="P",
     pickable=True,
 )
@@ -186,6 +186,7 @@ layerK = pdk.Layer(
     get_position=["lon", "lat"],
     threshold=1,
     aggregation=pdk.types.String("MEAN"),
+    color_range=COLOR_BREWER_BLUE_SCALE,
     get_weight="K",
     pickable=True,
 )
