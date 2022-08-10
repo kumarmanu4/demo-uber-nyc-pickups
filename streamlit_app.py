@@ -79,7 +79,7 @@ def map(data, lat, lon, zoom):
                 "pitch": 0,
             },
             layers=[
-                layer1
+                layerN
                 
             ],
         )
