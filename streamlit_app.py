@@ -23,7 +23,7 @@ import streamlit as st
 from ipywidgets import HTML
 
 # SETTING PAGE CONFIG TO WIDE MODE AND ADDING A TITLE AND FAVICON
-st.set_page_config(layout="wide", page_title="Indian Soil Prediction", page_icon=":tree:")
+st.set_page_config(layout="wide", page_title="Indian Soil Prediction", page_icon=":random:")
 
 # LOAD DATA ONCE
 @st.experimental_singleton
