@@ -1,0 +1,85 @@
+﻿soil_quality,city,state,lat,lon
+10.00,Agra,Uttar Pradesh,27.172187,78.007819
+20.00,Ahmedabad,Gujarat,23.022868,72.572522
+5.00,Allahabad,Uttar Pradesh,25.433826,81.846377
+30.00,Alwar,Rajasthan,27.552991,76.634573
+40.00,Amritsar,Punjab,31.63294,74.872693
+50.00,Asansol,West Bengal,23.677213,86.950671
+70.00,Aurangabad,Maharashtra,19.872343,75.339874
+80.00,Bailur,Karnataka,13.282641,74.925992
+23.00,Bangalore,Karnataka,12.96199,77.590416
+34.00,Belagavi,Karnataka,15.849695,74.497674
+67.00,Bharuch,Gujarat,21.705136,72.995875
+89.00,Bhatkal,Karnataka,13.997762,74.540469
+34.00,Bhilwara,Rajasthan,25.321377,74.586953
+56.00,Bhopal,Madhya Pradesh,23.25109,77.40794
+67.00,Bhubaneswar,Orissa,20.296059,85.82454
+89.00,Bikaner,Rajasthan,28.022935,73.311916
+34.00,Burdwan,West Bengal,23.232421,87.861479
+44.00,Chennai,Tamil Nadu,13.074278,80.272171
+56.00,Chikkamagaluru,Karnataka,13.404507,75.620809
+66.00,Chitradurga,Karnataka,14.230559,76.398454
+45.00,Coimbatore,Tamil Nadu,11.012039,76.961396
+12.00,Dadar,Maharashtra,19.021324,72.842418
+12.00,Delhi,Delhi NCT,28.639446,77.220937
+12.00,Dhanbad,Jharkhand,23.794038,86.429271
+34.00,Durg-Bhilainagar,Chhattisgarh,21.188374,81.284878
+56.00,Faridabad,Haryana,28.408912,77.317789
+78.00,Faridabad ,Haryana,28.40186,77.312197
+34.00,Ghaziabad,Uttar Pradesh,28.662835,77.42729
+5.00,Gurugram,Haryana,28.459497,77.026638
+6.00,Guwahati,Assam,26.144517,91.736237
+7.00,Gwalior,Madhya Pradesh,26.211624,78.182648
+33.00,Hathigaon,Assam,26.133861,91.780662
+45.00,Hoshangabad,Madhya Pradesh,22.744108,77.736967
+6.00,Hyderabad,Telangana,17.374951,78.477385
+7.00,Indore,Madhya Pradesh,22.718449,75.858002
+8.00,Jabalpur,Madhya Pradesh,23.178205,79.982483
+23.00,Jaipur,Rajasthan,26.904738,75.786427
+32.00,Jamshedpur,Jharkhand,22.801421,86.201861
+34.00,Jodhpur ,Rajasthan,26.242625,73.025391
+56.00,Kalburgi,Karnataka,17.314739,76.824343
+34.00,Kannur,Kerala,11.872917,75.370619
+87.00,Kanpur,Uttar Pradesh,26.445005,80.331857
+98.00,Kasargod,Kerala,12.43867,75.201229
+56.00,Kochi,Kerala,9.921673,76.26549
+45.00,Kodagu,Karnataka,12.337494,75.806908
+45.00,Kolar,Karnataka,13.135745,78.132561
+12.00,Kolkata,West Bengal,22.572646,88.363895
+23.00,Kollam,Kerala,8.885084,76.593752
+32.00,Kothur,Telangana,17.147351,78.2889
+76.00,Kozhikode,Kerala,11.251761,75.783335
+67.00,Lucknow,Uttar Pradesh,26.838821,80.942501
+89.00,Ludhiana,Punjab,30.897086,75.857357
+90.00,Madurai,Tamil Nadu,9.92102,78.12179
+45.00,Malappuram,Kerala,11.070957,76.074571
+56.00,Meerut,Uttar Pradesh,28.981238,77.701017
+38.00,Moreh,Manipur,24.251281,94.301304
+89.00,Mumbai,Maharashtra,19.068493,72.880505
+10.00,Mysuru,Karnataka,12.29581,76.639381
+20.00,Nagpur,Maharashtra,21.153984,79.084171
+5.00,Nashik,Maharasthra,19.9975,73.7898
+30.00,Patna,Bihar,25.598287,85.135144
+40.00,Pavagada,Karnataka,14.1031,77.280742
+50.00,Porbandar,Gujarat,21.641707,69.629265
+70.00,Porvorim and Ponda,Goa,15.537727,73.831614
+80.00,Pune,Maharasthra,18.521716,73.857118
+23.00,Raichur,Karnataka,16.212003,77.343928
+34.00,Raipur ,Chhattisgarh,21.253172,81.629198
+67.00,Rajkot,Gujarat,22.303894,70.80216
+89.00,Ramayampet,Telangana,18.115851,78.432562
+34.00,Ranchi,Jharkhand,23.351338,85.307581
+56.00,Rudrapur,Uttarakhand,28.987508,79.414121
+67.00,Salem,Tamil Nadu,11.664325,78.146014
+89.00,Sambalpur,Orissa,21.466872,83.981166
+34.00,Srinagar,Jammu & Kashmir,34.09015,74.799191
+44.00,Surat,Gujarat,21.17024,72.831061
+56.00,Thanjavur,Tamil Nadu,10.786999,79.137827
+66.00,Thiruvananthapuram,Kerala,8.526786,76.938081
+45.00,Thrissur,Kerala,10.524207,76.215694
+12.00,Vadodara,Gujarat,22.307159,73.181219
+12.00,Varanasi,Uttar Pradesh,25.319427,82.973768
+12.00,Vasai-Virar City,Maharasthra,19.387647,72.839545
+34.00,Vellore,Tamil Nadu,12.916517,79.132499
+56.00,Vijayawada,Andhra Pradesh,16.5062,80.648
+78.00,Visakhapatnam,Andhra Pradesh,17.675749,83.250835
