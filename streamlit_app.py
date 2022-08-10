@@ -205,6 +205,37 @@ elif option == 'K':
     layer_selected=layerK
 else:
     layer_selected=layer1
+
+df = pd.read_csv(
+        "Indian_location_soil.csv",
+        nrows=100000,  # approx. 10% of data
+        names=[
+            "Temperature",
+            "Humidity",
+            "Rainfall",
+            "pH",
+            "lat",
+            "lon",
+            "N",
+            "P",
+            "K",
+            "Soil",
+            "Crop",
+            "Fertilizer"
+        ],  # specify names directly since they don't change
+        skiprows=1,  # don't read header since names specified directly
+        usecols=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],          
+    )    
+    
+st.vega_lite_chart(df, {
+     'mark': {'type': 'circle', 'tooltip': True},
+     'encoding': {
+         'x': {'field': 'Temperature', 'type': 'quantitative'},
+         'y': {'field': 'Humidity', 'type': 'quantitative'},
+         'size': {'field': 'Rainfall', 'type': 'quantitative'},
+         'color': {'field': 'Rainfall', 'type': 'quantitative'},
+     },
+ })    
     
 with row1_2:
     st.write(
