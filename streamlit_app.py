@@ -98,6 +98,16 @@ def map(data, lat, lon, zoom):
     get_weight="P",
     pickable=True,
 ),
+                pdk.Layer(
+    "HeatmapLayer",
+    data=data,
+    opacity=0.9,
+    get_position=["lon", "lat"],
+    threshold=1,
+    aggregation=pdk.types.String("MEAN"),
+    get_weight="K",
+    pickable=True,
+),
                 
             ],
         )
