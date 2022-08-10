@@ -151,7 +151,7 @@ layer1 = pdk.Layer(
     data=data_filter,
     get_position=['lon', 'lat'],
     auto_highlight=True,
-    get_radius=1000,          # Radius is given in meters
+    get_radius=10000,          # Radius is given in meters
     get_fill_color=[180, 0, 200, 140],  # Set an RGBA value for fill
     pickable=True)
 
