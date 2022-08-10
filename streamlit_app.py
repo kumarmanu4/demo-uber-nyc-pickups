@@ -266,13 +266,12 @@ st.vega_lite_chart(df, {
      'mark': {'type': 'circle', 'tooltip': True},
      'encoding': {
          'x': {'field': 'Rainfall', 'type': 'quantitative'},
-         'y': {'field': 'Temperature', 'type': 'quantitative'},
-         'x2': {'field': 'Humidity', 'type': 'quantitative'},
-         "longitude": {'field': 'lon', 'type': 'quantitative'},
-    "latitude": {'field': 'lat', 'type': 'quantitative'},
+         'y': {'field': 'Temperature', 'type': 'quantitative'},                 
          'size': {'field': 'Humidity', 'type': 'quantitative'},
          'color': {'field': 'Temperature', 'type': 'quantitative'},
-         'opacity': {'field': 'pH', 'type': 'quantitative'},
+         'z': {'field': 'pH', 'type': 'quantitative'},
+          "longitude": {'field': 'lon', 'type': 'quantitative'},
+    "latitude": {'field': 'lat', 'type': 'quantitative'}
      },
  }, use_container_width=True)    
     
