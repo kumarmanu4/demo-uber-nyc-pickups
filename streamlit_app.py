@@ -85,51 +85,8 @@ def map(data, lat, lon, zoom):
         )
     )
 
-data = ''    
+   
 
-layer1 = pdk.Layer(
-    'ScatterplotLayer',     # Change the `type` positional argument here
-    data=data,
-    get_position=['lon', 'lat'],
-    auto_highlight=True,
-    get_radius=1000,          # Radius is given in meters
-    get_fill_color=[180, 0, 200, 140],  # Set an RGBA value for fill
-    pickable=True)
-
-layerN = pdk.Layer(
-    "HeatmapLayer",
-    data=data,
-    opacity=0.9,
-    get_position=["lon", "lat"],
-    aggregation=pdk.types.String("MEAN"),
-    color_range=COLOR_BREWER_BLUE_SCALE,
-    threshold=1,
-    get_weight="N",
-    pickable=True,
-)
-
-layerP = pdk.Layer(
-    "HeatmapLayer",
-    data=data,
-    opacity=0.9,
-    get_position=["lon", "lat"],
-    threshold=1,
-    aggregation=pdk.types.String("MEAN"),
-    color_range=color_range2,
-    get_weight="P",
-    pickable=True,
-)
-
-layerK = pdk.Layer(
-    "HeatmapLayer",
-    data=data,
-    opacity=0.9,
-    get_position=["lon", "lat"],
-    threshold=1,
-    aggregation=pdk.types.String("MEAN"),
-    get_weight="K",
-    pickable=True,
-)
 
 # STREAMLIT APP LAYOUT
 data = load_data()
@@ -187,9 +144,56 @@ with row1_1:
         "Select Year", 1990, 2022, key="year", on_change=update_query_params
     )
 
+data_filter = filterdata(data, year_selected)    
+    
+layer1 = pdk.Layer(
+    'ScatterplotLayer',     # Change the `type` positional argument here
+    data=data_filter,
+    get_position=['lon', 'lat'],
+    auto_highlight=True,
+    get_radius=1000,          # Radius is given in meters
+    get_fill_color=[180, 0, 200, 140],  # Set an RGBA value for fill
+    pickable=True)
+
+layerN = pdk.Layer(
+    "HeatmapLayer",
+    data=data_filter,
+    opacity=0.9,
+    get_position=["lon", "lat"],
+    aggregation=pdk.types.String("MEAN"),
+    color_range=COLOR_BREWER_BLUE_SCALE,
+    threshold=1,
+    get_weight="N",
+    pickable=True,
+)
+
+layerP = pdk.Layer(
+    "HeatmapLayer",
+    data=data_filter,
+    opacity=0.9,
+    get_position=["lon", "lat"],
+    threshold=1,
+    aggregation=pdk.types.String("MEAN"),
+    color_range=color_range2,
+    get_weight="P",
+    pickable=True,
+)
+
+layerK = pdk.Layer(
+    "HeatmapLayer",
+    data=data_filter,
+    opacity=0.9,
+    get_position=["lon", "lat"],
+    threshold=1,
+    aggregation=pdk.types.String("MEAN"),
+    get_weight="K",
+    pickable=True,
+)
+    
+    
 option = st.selectbox(
      'Select the option?',
-     ('N', 'P', 'K'))    
+     ('N', 'P', 'K', 'Scatter'))    
 st.write('You selected:', option)
 
 if option == 'N':
@@ -224,4 +228,4 @@ with row2_1:
     st.write(
         f"""**indian cities map**"""
     )
-    map(filterdata(data, year_selected), midpoint[0], midpoint[1], 11)
+    map(data_filter, midpoint[0], midpoint[1], 11)
