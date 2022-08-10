@@ -32,7 +32,7 @@ def load_data():
         "IndianSoilData.csv",
         nrows=100000,  # approx. 10% of data
         names=[
-            "soil_quality",
+            "year",
             "city",
             "state",
             "lat",
