@@ -28,7 +28,7 @@ st.set_page_config(layout="wide", page_title="NYC Ridesharing Demo", page_icon="
 @st.experimental_singleton
 def load_data():
     data = pd.read_csv(
-        "indianCities.csv",
+        "IndianSoilData.csv",
         nrows=100000,  # approx. 10% of data
         names=[
             "soil_quality",
