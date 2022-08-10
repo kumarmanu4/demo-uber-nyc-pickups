@@ -122,7 +122,7 @@ def update_query_params():
 with row1_1:
     st.title("Indian Soil Data")
     hour_selected = st.slider(
-        "Select Year", 0, 23, key="year", on_change=update_query_params
+        "Select Year", 1990, 2022, key="year", on_change=update_query_params
     )
 
 
