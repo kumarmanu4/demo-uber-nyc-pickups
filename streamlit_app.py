@@ -44,6 +44,14 @@ def load_data():
 
     return data
 
+COLOR_BREWER_BLUE_SCALE = [
+    [240, 249, 232],
+    [204, 235, 197],
+    [168, 221, 181],
+    [123, 204, 196],
+    [67, 162, 202],
+    [8, 104, 172],
+]
 
 # FUNCTION FOR AIRPORT MAPS
 def map(data, lat, lon, zoom):
