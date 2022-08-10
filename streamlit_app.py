@@ -53,7 +53,7 @@ def map(data, lat, lon, zoom):
                 "latitude": lat,
                 "longitude": lon,
                 "zoom": zoom,
-                "pitch": 0,
+                "pitch": 50,
             },
             layers=[
                 pdk.Layer(
