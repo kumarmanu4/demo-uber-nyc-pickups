@@ -103,6 +103,9 @@ def map(data, lat, lon, zoom):
         )
     )
 
+# STREAMLIT APP LAYOUT
+data = load_data()    
+    
 text = HTML(value='Move the viewport')
 layer = pdk.Layer(
     'ScatterplotLayer',
@@ -155,8 +158,7 @@ def histdata(df, hr):
     return pd.DataFrame({"minute": range(60), "pickups": hist})
 
 
-# STREAMLIT APP LAYOUT
-data = load_data()
+
 
 # LAYING OUT THE TOP SECTION OF THE APP
 row1_1, row1_2 = st.columns((2, 3))
