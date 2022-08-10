@@ -86,6 +86,7 @@ def map(data, lat, lon, zoom):
     get_position=["lon", "lat"],
     threshold=0.75,
     aggregation=pdk.types.String("MEAN"),
+     color_range=[0,10,50],
     get_weight="P",
     pickable=True,
 ),
@@ -96,6 +97,7 @@ def map(data, lat, lon, zoom):
     get_position=["lon", "lat"],
     threshold=0.75,
     aggregation=pdk.types.String("MEAN"),
+     color_range=[10,0,5]
     get_weight="K",
     pickable=True,
 )
