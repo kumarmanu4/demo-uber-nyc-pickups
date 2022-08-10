@@ -187,6 +187,10 @@ with row1_1:
         "Select Year", 1990, 2022, key="year", on_change=update_query_params
     )
 
+option = st.selectbox(
+     'Select the option?',
+     ('N', 'P', 'K'))    
+st.write('You selected:', option)
 
 with row1_2:
     st.write(
