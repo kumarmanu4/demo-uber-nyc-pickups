@@ -36,9 +36,10 @@ def load_data():
             "state",
             "lat",
             "lon",
+            "weight"
         ],  # specify names directly since they don't change
         skiprows=1,  # don't read header since names specified directly
-        usecols=[0, 1, 2, 3, 4],  # doesn't load last column, constant value "B02512"
+        usecols=[0, 1, 2, 3, 4, 5],  # doesn't load last column, constant value "B02512"
         
     )
 
