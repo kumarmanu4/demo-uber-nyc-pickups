@@ -64,6 +64,50 @@ color_range2 = [ [65, 182, 196],
     [227, 26, 28],
     [189, 0, 38]]
 
+layer1 = pdk.Layer(
+    'ScatterplotLayer',     # Change the `type` positional argument here
+    data,
+    get_position=['lon', 'lat'],
+    auto_highlight=True,
+    get_radius=1000,          # Radius is given in meters
+    get_fill_color=[180, 0, 200, 140],  # Set an RGBA value for fill
+    pickable=True)
+
+layerN = pdk.Layer(
+    "HeatmapLayer",
+    data=data,
+    opacity=0.9,
+    get_position=["lon", "lat"],
+    aggregation=pdk.types.String("MEAN"),
+    color_range=COLOR_BREWER_BLUE_SCALE,
+    threshold=1,
+    get_weight="N",
+    pickable=True,
+)
+
+layerP = pdk.Layer(
+    "HeatmapLayer",
+    data=data,
+    opacity=0.9,
+    get_position=["lon", "lat"],
+    threshold=1,
+    aggregation=pdk.types.String("MEAN"),
+    color_range=color_range2,
+    get_weight="P",
+    pickable=True,
+)
+
+layerK = pdk.Layer(
+    "HeatmapLayer",
+    data=data,
+    opacity=0.9,
+    get_position=["lon", "lat"],
+    threshold=1,
+    aggregation=pdk.types.String("MEAN"),
+    get_weight="K",
+    pickable=True,
+)
+
 # FUNCTION FOR AIRPORT MAPS
 def map(data, lat, lon, zoom):
     st.write(
@@ -76,38 +120,7 @@ def map(data, lat, lon, zoom):
                 "pitch": 0,
             },
             layers=[
-                pdk.Layer(
-    "HeatmapLayer",
-    data=data,
-    opacity=0.9,
-    get_position=["lon", "lat"],
-    aggregation=pdk.types.String("MEAN"),
-    color_range=COLOR_BREWER_BLUE_SCALE,
-    threshold=1,
-    get_weight="N",
-    pickable=True,
-),
-                pdk.Layer(
-    "HeatmapLayer",
-    data=data,
-    opacity=0.9,
-    get_position=["lon", "lat"],
-    threshold=1,
-    aggregation=pdk.types.String("MEAN"),
-    color_range=color_range2,
-    get_weight="P",
-    pickable=True,
-),
-                pdk.Layer(
-    "HeatmapLayer",
-    data=data,
-    opacity=0.9,
-    get_position=["lon", "lat"],
-    threshold=1,
-    aggregation=pdk.types.String("MEAN"),
-    get_weight="K",
-    pickable=True,
-),
+                layer1
                 
             ],
         )
