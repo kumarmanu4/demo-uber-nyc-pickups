@@ -265,8 +265,8 @@ df = pd.read_csv(
 st.vega_lite_chart(df, {
      'mark': {'type': 'circle', 'tooltip': True},
      'encoding': {
-         'x': {'field': 'Temperature', 'type': 'quantitative'},
-         'y': {'field': 'Humidity', 'type': 'quantitative'},
+         'x': {'field': 'lon', 'type': 'quantitative'},
+         'y': {'field': 'lat', 'type': 'quantitative'},
          'size': {'field': 'Rainfall', 'type': 'quantitative'},
          'color': {'field': 'Rainfall', 'type': 'quantitative'},
      },
