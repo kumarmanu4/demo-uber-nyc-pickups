@@ -84,7 +84,7 @@ def map(data, lat, lon, zoom):
     data=data,
     opacity=0.9,
     get_position=["lon", "lat"],
-    threshold=0.75,
+    threshold=1,
     aggregation=pdk.types.String("MEAN"),
     
     get_weight="P",
