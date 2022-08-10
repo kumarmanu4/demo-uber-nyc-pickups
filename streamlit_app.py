@@ -133,33 +133,7 @@ layerK = pdk.Layer(
 )
 
 
-text = HTML(value='Move the viewport')
-layer = pdk.Layer(
-    'ScatterplotLayer',
-    data=data,
-    pickable=True,
-    get_position=['lon', 'lat'],
-    get_fill_color=[255, 0, 0],
-    get_radius=100
-)
-r = pdk.Deck(layer)
 
-def filter_by_bbox(row, west_lng, east_lng, north_lat, south_lat):
-    return west_lng < row['lon'] < east_lng and south_lat < row['lat'] < north_lat
-
-def filter_by_viewport(widget_instance, payload):
-    try:
-        west_lng, north_lat = payload['data']['nw']
-        east_lng, south_lat = payload['data']['se']
-        filtered_df = df[df.apply(lambda row: filter_by_bbox(row, west_lng, east_lng, north_lat, south_lat), axis=1)]
-        text.value = 'Points in viewport: %s' % int(filtered_df.count()['lon'])
-    except Exception as e:
-        text.value = 'Error: %s' % e
-
-
-r.deck_widget.on_click(filter_by_viewport)
-#display(text)
-r.show()    
 
 # FILTER DATA FOR A SPECIFIC HOUR, CACHE
 @st.experimental_memo
