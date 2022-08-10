@@ -178,7 +178,7 @@ row1_1, row1_2 = st.columns((2, 3))
 # E.G. https://share.streamlit.io/streamlit/demo-uber-nyc-pickups/main?pickup_hour=2
 if not st.session_state.get("url_synced", False):
     try:
-        pickup_hour = int(st.experimental_get_query_params()["year"][0])
+        year = int(st.experimental_get_query_params()["year"][0])
         st.session_state["year"] = year
         st.session_state["url_synced"] = True
     except KeyError:
