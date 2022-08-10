@@ -56,6 +56,13 @@ COLOR_BREWER_BLUE_SCALE = [
     [8, 104, 172],
 ]
 
+color_range2 = [ [65, 182, 196],
+    [254, 178, 76],
+    [253, 141, 60],
+    [252, 78, 42],
+    [227, 26, 28],
+    [189, 0, 38]]
+
 # FUNCTION FOR AIRPORT MAPS
 def map(data, lat, lon, zoom):
     st.write(
@@ -86,7 +93,7 @@ def map(data, lat, lon, zoom):
     get_position=["lon", "lat"],
     threshold=1,
     aggregation=pdk.types.String("MEAN"),
-    
+    color_range=color_range2,
     get_weight="P",
     pickable=True,
 ),
