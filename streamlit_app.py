@@ -131,7 +131,7 @@ def filter_by_viewport(widget_instance, payload):
 
 
 r.deck_widget.on_click(filter_by_viewport)
-display(text)
+#display(text)
 r.show()    
 
 # FILTER DATA FOR A SPECIFIC HOUR, CACHE
