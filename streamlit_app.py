@@ -308,7 +308,7 @@ data =  {
                 "input1":
                 {
                     "ColumnNames": ["Temperature", "Humidity", "Rainfall", "pH", "N", "P", "K", "Soil", "Crop"],
-                    "Values": [ [ "0", "0", "0", "0", "0", "0", "0", "value", "value" ], [ "0", "0", "0", "0", "0", "0", "0", "value", "value" ], ]
+                    "Values": [ [ "24.87", "82.84", "295.61", "6.59", "4", "2", "2.5", "Clayey", "rice" ], ]
                 },        },
             "GlobalParameters": {
 }
