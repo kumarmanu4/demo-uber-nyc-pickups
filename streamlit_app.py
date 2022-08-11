@@ -216,8 +216,8 @@ st.write('The Temperature is: ', Temperature)
 Humidity = st.number_input('Enter Humidity:')
 st.write('The Humidity is: ', Humidity)
 
-RainFall = st.number_input('Enter Rainfall:')
-st.write('The RainFall is: ', RainFall)
+Rainfall = st.number_input('Enter Rainfall:')
+st.write('The Rainfall is: ', Rainfall)
 
 pH = st.number_input('Enter pH:')
 st.write('The pH is: ', pH)
