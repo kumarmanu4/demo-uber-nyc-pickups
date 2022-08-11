@@ -71,7 +71,7 @@ color_range2 = [ [65, 182, 196],
 def map(data, lat, lon, zoom):
     st.write(
         pdk.Deck(
-            map_style="mapbox://styles/mapbox/light-v9",
+            map_style="mapbox://styles/mapbox/dark",
             initial_view_state={
                 "latitude": lat,
                 "longitude": lon,
