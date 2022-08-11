@@ -210,8 +210,8 @@ layerH = pdk.Layer(
                     extruded=True,
                 )
 
-Temp = st.number_input('Enter Temperature:')
-st.write('The Temperature is: ', Temp)
+Temperature = st.number_input('Enter Temperature:')
+st.write('The Temperature is: ', Temperature)
 
 Humidity = st.number_input('Enter Humidity:')
 st.write('The Humidity is: ', Humidity)
@@ -221,6 +221,15 @@ st.write('The RainFall is: ', RainFall)
 
 pH = st.number_input('Enter pH:')
 st.write('The pH is: ', pH)
+
+N = st.number_input('Enter (sodium) N:')
+st.write('The N is: ', N)
+
+P = st.number_input('Enter (phosporous) P:')
+st.write('The P is: ', P)
+
+K = st.number_input('Enter (potassium) K:')
+st.write('The K is: ', K)
 
 Crop = st.text_input('Enter Crop:')
 st.write('The Crop is: ', Crop)
@@ -308,7 +317,7 @@ data =  {
                 "input1":
                 {
                     "ColumnNames": ["Temperature", "Humidity", "Rainfall", "pH", "N", "P", "K", "Soil", "Crop"],
-                    "Values": [ [ "24.87", "82.84", "295.61", "6.59", "4", "2", "2.5", "Clayey", "rice" ], ]
+                    "Values": [ [ Temperature, Humidity, Rainfall, pH, N, P, K, Soil, Crop ], ]
                 },        },
             "GlobalParameters": {
 }
