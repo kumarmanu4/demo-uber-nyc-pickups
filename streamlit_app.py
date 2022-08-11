@@ -339,4 +339,7 @@ except urllib.HTTPError as error:
 
     print(json.loads(error.read()))                 
 
-st.write(result)    
+fertilizer = result["Results"]["output1"]["value"]["Values"][16]    
+st.write(result)
+
+st.write(fertilizer)
