@@ -320,7 +320,7 @@ url = 'https://ussouthcentral.services.azureml.net/workspaces/db6f78dcec4b451b97
 api_key = 'i+YIYGrmJDKrOTB8JwXKNquMBECmrio6PrayTdla0foPxP9lANJ0aJVV1ZFJq7APCM8xjCEXguzP+AMC1tg1TQ==' 
 headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
 
-req = urllib2.Request(url, body, headers) 
+req = urllib.Request(url, body, headers) 
 
 try:
     response = urllib.urlopen(req)
