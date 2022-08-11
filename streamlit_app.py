@@ -329,7 +329,7 @@ try:
     # req = urllib.request.Request(url, body, headers) 
     # response = urllib.request.urlopen(req)
 
-    result = response.read()
+    result = response.read().decode("utf-8")
     print(result) 
 except urllib.HTTPError as error:
     print("The request failed with status code: " + str(error.code))
@@ -339,7 +339,7 @@ except urllib.HTTPError as error:
 
     print(json.loads(error.read()))                 
 
-fertilizer = result["Results"]["output1"]["value"]["Values"][16]    
+#fertilizer = result["Results"]["output1"]["value"]["Values"][16]    
 st.write(result)
 
-st.write(fertilizer)
+#st.write(fertilizer)
