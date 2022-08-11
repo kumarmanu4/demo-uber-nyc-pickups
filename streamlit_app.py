@@ -21,7 +21,7 @@ import pandas as pd
 import pydeck as pdk
 import streamlit as st
 from ipywidgets import HTML
-import urllib
+from urllib.request import urlopen, Request
 import json
 
 # SETTING PAGE CONFIG TO WIDE MODE AND ADDING A TITLE AND FAVICON
@@ -320,10 +320,10 @@ url = 'https://ussouthcentral.services.azureml.net/workspaces/db6f78dcec4b451b97
 api_key = 'i+YIYGrmJDKrOTB8JwXKNquMBECmrio6PrayTdla0foPxP9lANJ0aJVV1ZFJq7APCM8xjCEXguzP+AMC1tg1TQ==' 
 headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
 
-req = urllib.request(url, body, headers) 
+req = Request(url, body, headers) 
 
 try:
-    response = urllib.urlopen(req)
+    response = urlopen(req)
 
     # If you are using Python 3+, replace urllib2 with urllib.request in the above code:
     # req = urllib.request.Request(url, body, headers) 
