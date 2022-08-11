@@ -231,11 +231,15 @@ st.write('The P is: ', P)
 K = st.number_input('Enter (potassium) K:')
 st.write('The K is: ', K)
 
-Crop = st.text_input('Enter Crop:')
-st.write('The Crop is: ', Crop)
+Soil = st.radio(
+     "Choose soil type:",
+     ('alluvial', 'clay loam', 'Clayey', 'coastal', 'laterite', 'sandy', 'silty clay'))
 
-Soil = st.text_input('Enter Soil:')
-st.write('The Soil is: ', Soil)
+Crop = st.radio(
+     "Choose the crop to grow:",
+     ('rice', 'Coconut'))
+
+
 
 
 option = st.selectbox(
