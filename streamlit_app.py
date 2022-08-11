@@ -21,6 +21,8 @@ import pandas as pd
 import pydeck as pdk
 import streamlit as st
 from ipywidgets import HTML
+import urllib
+import json
 
 # SETTING PAGE CONFIG TO WIDE MODE AND ADDING A TITLE AND FAVICON
 st.set_page_config(layout="wide", page_title="Soil Fertilizer Prediction", page_icon=":factory:")
@@ -298,3 +300,42 @@ with row2_1:
         f"""**Indian cities map**"""
     )
     map(data_filter, midpoint[0], midpoint[1], 11)
+
+data =  {
+
+        "Inputs": {
+
+                "input1":
+                {
+                    "ColumnNames": ["Temperature", "Humidity", "Rainfall", "pH", "N", "P", "K", "Soil", "Crop"],
+                    "Values": [ [ "0", "0", "0", "0", "0", "0", "0", "value", "value" ], [ "0", "0", "0", "0", "0", "0", "0", "value", "value" ], ]
+                },        },
+            "GlobalParameters": {
+}
+    }
+
+body = str.encode(json.dumps(data))
+
+url = 'https://ussouthcentral.services.azureml.net/workspaces/db6f78dcec4b451b976d7db2a695767b/services/3d86e4c694814b26952ec2e76efe272d/execute?api-version=2.0&details=true'
+api_key = 'i+YIYGrmJDKrOTB8JwXKNquMBECmrio6PrayTdla0foPxP9lANJ0aJVV1ZFJq7APCM8xjCEXguzP+AMC1tg1TQ==' 
+headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
+
+req = urllib2.Request(url, body, headers) 
+
+try:
+    response = urllib.urlopen(req)
+
+    # If you are using Python 3+, replace urllib2 with urllib.request in the above code:
+    # req = urllib.request.Request(url, body, headers) 
+    # response = urllib.request.urlopen(req)
+
+    result = response.read()
+    print(result) 
+except urllib.HTTPError, error:
+    print("The request failed with status code: " + str(error.code))
+
+    # Print the headers - they include the requert ID and the timestamp, which are useful for debugging the failure
+    print(error.info())
+
+    print(json.loads(error.read()))                 
+    
