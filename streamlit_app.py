@@ -338,4 +338,5 @@ except urllib.HTTPError as error:
     print(error.info())
 
     print(json.loads(error.read()))                 
-    
+
+st.write(result)    
