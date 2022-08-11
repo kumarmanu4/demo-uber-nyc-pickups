@@ -331,7 +331,7 @@ try:
 
     result = response.read()
     print(result) 
-except urllib.HTTPError, error:
+except urllib.HTTPError as error:
     print("The request failed with status code: " + str(error.code))
 
     # Print the headers - they include the requert ID and the timestamp, which are useful for debugging the failure
