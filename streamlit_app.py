@@ -343,4 +343,4 @@ result = json.loads(result)
 fertilizer = result["Results"]["output1"]["value"]["Values"][0][16]    
 st.write(result)
 
-st.write("""FERTILIZER TO BE USED: """ fertilizer)
+st.write("""FERTILIZER TO BE USED: """, fertilizer)
